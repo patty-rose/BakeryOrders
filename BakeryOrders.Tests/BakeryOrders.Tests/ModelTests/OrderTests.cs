@@ -35,6 +35,20 @@ namespace BakeryOrders.Tests
     }
 
     [TestMethod]
+    public void GetDescription_ReturnsDescription_String() 
+    {
+      // Arrange
+      string description = "test description";
+      Order newOrder = new Order("test order", description, 10);
+
+      // Act
+      string result = newOrder.Description;
+
+      // Assert (test)
+      Assert.AreEqual(description, result);
+    }
+
+    [TestMethod]
     public void GetAll_ReturnsEmptyList_OrderList()
     {
       List<Order> newList = new List<Order> { };
