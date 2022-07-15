@@ -56,5 +56,20 @@ namespace BakeryOrders.Tests
       Assert.AreEqual(1, result);
     }
 
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      //Arrange
+      string title01 = "Suzie's Cafe-07/15/2022";
+      string title02 = "New seasons-07/15/2022";
+      Order newOrder1 = new Order(title01);
+      Order newOrder2 = new Order (title02);
+
+      //Act
+      Order result = Order.Find(2);
+
+      //Assert
+      Assert.AreEqual(newOrder2, result);
+    }
   }
 }
