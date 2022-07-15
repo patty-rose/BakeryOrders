@@ -18,15 +18,15 @@ namespace BakeryOrders.Models
     }
 
     //class methods
-    // public static void ClearAll()
-    // {
-    //   _instances.Clear();
-    // }
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
 
-    // public static List<Order> GetAll()
-    // {
-    //   return _instances;
-    // }
+    public static List<Order> GetAll()
+    {
+      return _instances;
+    }
 
     // public static Order Find(int searchId)
     // {
