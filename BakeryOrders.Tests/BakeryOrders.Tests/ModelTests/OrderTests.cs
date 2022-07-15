@@ -16,7 +16,7 @@ namespace BakeryOrders.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("test Order");
+      Order newOrder = new Order("test Order", "test Description", 10);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -25,7 +25,7 @@ namespace BakeryOrders.Tests
     {
       // Arrange
       string Title = "Suzie's Cafe-07/15/2022";
-      Order newOrder = new Order(Title);
+      Order newOrder = new Order(Title, "test Description", 10);
 
       // Act
       string result = newOrder.Title;
@@ -47,7 +47,7 @@ namespace BakeryOrders.Tests
     {
       //Arrange
       string title = "Suzie's Cafe-07/15/2022";
-      Order newOrder = new Order(title);
+      Order newOrder = new Order(title, "test Description", 10);
 
       //Act
       int result = newOrder.Id;
@@ -62,8 +62,8 @@ namespace BakeryOrders.Tests
       //Arrange
       string title01 = "Suzie's Cafe-07/15/2022";
       string title02 = "New seasons-07/15/2022";
-      Order newOrder1 = new Order(title01);
-      Order newOrder2 = new Order (title02);
+      Order newOrder1 = new Order(title01, "test Description", 10);
+      Order newOrder2 = new Order (title02, "test Description", 10);
 
       //Act
       Order result = Order.Find(2);

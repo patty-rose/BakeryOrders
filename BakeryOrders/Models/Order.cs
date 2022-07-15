@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace BakeryOrders.Models
 {
@@ -6,13 +7,18 @@ namespace BakeryOrders.Models
   {
     // auto implemented properties
     public string Title { get; set; }
+    public string Description { get; set; }
+    public int Price { get; set; }
+    // public DateTime Date { get; set; }
     public int Id { get; }
     private static List<Order> _instances = new List<Order> {};
 
     //constructor
-    public Order(string OrderTitle)
+    public Order(string orderTitle, string orderDescription, int orderPrice)
     {
-      Title = OrderTitle;
+      Title = orderTitle;
+      Description = orderDescription;
+      Price = orderPrice;
       _instances.Add(this);
       Id = _instances.Count;
     }
