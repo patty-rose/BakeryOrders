@@ -41,5 +41,20 @@ namespace BakeryOrders.Tests
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetId_OrderInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      //Arrange
+      string title = "Suzie's Cafe-07/15/2022";
+      Order newOrder = new Order(title);
+
+      //Act
+      int result = newOrder.Id;
+
+      //Assert
+      Assert.AreEqual(1, result);
+    }
+
   }
 }
