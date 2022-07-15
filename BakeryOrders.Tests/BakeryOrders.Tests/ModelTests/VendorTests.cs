@@ -16,7 +16,7 @@ namespace BakeryOrders.Tests
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
-      Vendor newVendor = new Vendor("test Vendor");
+      Vendor newVendor = new Vendor("test Vendor", "test Description");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
 
@@ -25,7 +25,7 @@ namespace BakeryOrders.Tests
     {
       //Arrange
       string name = "Test Vendor";
-      Vendor newVendor = new Vendor(name);
+      Vendor newVendor = new Vendor(name, "test Description");
 
       //Act
       string result = newVendor.Name;
@@ -35,11 +35,25 @@ namespace BakeryOrders.Tests
     }
 
     [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      //Arrange
+      string description = "Test Description";
+      Vendor newVendor = new Vendor("test Vendor", description);
+
+      //Act
+      string result = newVendor.Description;
+
+      //Assert
+      Assert.AreEqual(description, result);
+    }
+
+    [TestMethod]
     public void GetId_ReturnsVendorId_Int()
     {
       //Arrange
       string name = "Test Vendor";
-      Vendor newVendor = new Vendor(name);
+      Vendor newVendor = new Vendor(name, "test Description");
 
       //Act
       int result = newVendor.Id;
@@ -54,8 +68,8 @@ namespace BakeryOrders.Tests
       //Arrange
       string name01 = "Suzie's Cafe";
       string name02 = "New Season's";
-      Vendor newVendor1 = new Vendor(name01);
-      Vendor newVendor2 = new Vendor(name02);
+      Vendor newVendor1 = new Vendor(name01, "test Description");
+      Vendor newVendor2 = new Vendor(name02, "test Description");
       List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
 
       //Act
@@ -71,8 +85,8 @@ namespace BakeryOrders.Tests
       //Arrange
       string name01 = "Suzie's Cafe";
       string name02 = "New Season's";
-      Vendor newVendor1 = new Vendor(name01);
-      Vendor newVendor2 = new Vendor(name02);
+      Vendor newVendor1 = new Vendor(name01, "test Description");
+      Vendor newVendor2 = new Vendor(name02, "test Description");
 
       //Act
       Vendor result = Vendor.Find(2);
@@ -86,7 +100,7 @@ namespace BakeryOrders.Tests
     {
       //Arrange
       Order newOrder = new Order("Suzie's Cafe-07/15/2022");
-      Vendor newVendor = new Vendor("Suzie's Cafe");
+      Vendor newVendor = new Vendor("Suzie's Cafe", "test Description");
       newVendor.AddOrder(newOrder);
       List<Order> newList = new List<Order> { newOrder };
 
