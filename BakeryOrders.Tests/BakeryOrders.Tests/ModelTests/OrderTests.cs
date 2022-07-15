@@ -49,6 +49,20 @@ namespace BakeryOrders.Tests
     }
 
     [TestMethod]
+    public void GetDescription_ReturnsPrice_Int() 
+    {
+      // Arrange
+      int price = 10;
+      Order newOrder = new Order("test order", "test description", price);
+
+      // Act
+      int result = newOrder.Price;
+
+      // Assert (test)
+      Assert.AreEqual(price, result);
+    }
+
+    [TestMethod]
     public void GetAll_ReturnsEmptyList_OrderList()
     {
       List<Order> newList = new List<Order> { };
