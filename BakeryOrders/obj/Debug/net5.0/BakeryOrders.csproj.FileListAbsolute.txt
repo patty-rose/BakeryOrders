@@ -36,4 +36,5 @@
 /Users/pattyrose/Desktop/c0ding/BakeryOrders.Solution/BakeryOrders/obj/Debug/net5.0/BakeryOrders.RazorTargetAssemblyInfo.cs
 /Users/pattyrose/Desktop/c0ding/BakeryOrders.Solution/BakeryOrders/obj/Debug/net5.0/BakeryOrders.Views.pdb
 /Users/pattyrose/Desktop/c0ding/BakeryOrders.Solution/BakeryOrders/obj/Debug/net5.0/BakeryOrders.csproj.CopyComplete
-/Users/pattyrose/Desktop/c0ding/BakeryOrders.Solution/BakeryOrders/obj/Debug/net5.0/Razor/Views/Shared/Header.cshtml.g.cs
+/Users/pattyrose/Desktop/c0ding/BakeryOrders.Solution/BakeryOrders/obj/Debug/net5.0/Razor/Views/Shared/Footer.cshtml.g.cs
+/Users/pattyrose/Desktop/c0ding/BakeryOrders.Solution/BakeryOrders/obj/Debug/net5.0/Razor/Views/Shared/Logo.cshtml.g.cs

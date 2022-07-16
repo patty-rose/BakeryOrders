@@ -1,5 +1,6 @@
 body {
-  margin: 100px;
+  margin: 10%;
+  margin-top: 150px;
   background-color: rgb(225, 215, 180);
 }
 
@@ -7,15 +8,27 @@ div.splash {
   text-align: center;
 }
 
-div#header {
+div#footer {
   position:fixed;
   top:0px;
   left:0px;
   width:100%;
-  color:#e1d7b4;
   background:#28789d;
   padding:8px;
-  display:inline-block;
+}
+
+div#logo{
+  position:fixed;
+  bottom: 50px;
+  left: 30%;
+  display: block;
+}
+
+img.logo{
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: auto;
 }
 
 a:link{
@@ -34,18 +47,18 @@ a.visited{
   color:#28789d;
 }
 
-a.header:link {
+a.footer:link {
   color: #e1d7b4;
 }
 
-a.header:hover {
+a.footer:hover {
   color: #ceaa28;
 }
 
-a.header:visited {
+a.footer:visited {
   color: #e1d7b4;
 }
 
-a.header:active {
+a.footer:active {
   color: green;
 }
