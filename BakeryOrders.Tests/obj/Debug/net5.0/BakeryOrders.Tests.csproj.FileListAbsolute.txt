@@ -101,3 +101,5 @@
 /Users/pattyrose/Desktop/c0ding/BakeryOrders.Solution/BakeryOrders.Tests/obj/Debug/net5.0/ref/BakeryOrders.Tests.dll
 /Users/pattyrose/Desktop/c0ding/BakeryOrders.Solution/BakeryOrders.Tests/obj/Debug/net5.0/BakeryOrders.Tests.pdb
 /Users/pattyrose/Desktop/c0ding/BakeryOrders.Solution/BakeryOrders.Tests/obj/Debug/net5.0/BakeryOrders.Tests.genruntimeconfig.cache
+/Users/pattyrose/Desktop/c0ding/BakeryOrders.Solution/BakeryOrders.Tests/bin/Debug/net5.0/BakeryOrders.Views.dll
+/Users/pattyrose/Desktop/c0ding/BakeryOrders.Solution/BakeryOrders.Tests/bin/Debug/net5.0/BakeryOrders.Views.pdb
