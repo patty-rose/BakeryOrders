@@ -1,10 +1,10 @@
-h1 {
-  font-size: x-large;
-}
-
 body {
   margin: 50px;
-  background-color: aquamarine;
+  background-color: rgb(225, 215, 180);
+}
+
+div.splash {
+  text-align: center;
 }
 
 div#footer {

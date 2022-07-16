@@ -1,12 +1,19 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Pierre's Bakery Orders</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
   <body>
-    <h1>Welcome Pierre!</h1>
+    <div class="splash">
+      <img src="~/img/logo.png" alt="bakery tools with text 'Pierre's Vendor Management'" id="splash-logo">
+      <h1>Welcome Pierre!</h1>
+      <ul>
+        <h3><a href='/vendors'>View vendors</a></h3>
+        <h3><a href='/vendors/new'>Add a new vendor</a></h3>
+      </ul>
+    </div>
   </body>
 </html>
