@@ -1,5 +1,5 @@
 body {
-  margin: 50px;
+  margin: 100px;
   background-color: rgb(225, 215, 180);
 }
 
@@ -7,12 +7,45 @@ div.splash {
   text-align: center;
 }
 
-div#footer {
+div#header {
   position:fixed;
-  bottom:0px;
+  top:0px;
   left:0px;
   width:100%;
-  color:#CCC;
-  background:#333;
+  color:#e1d7b4;
+  background:#28789d;
   padding:8px;
+  display:inline-block;
+}
+
+a:link{
+  color: #28789d;
+}
+
+a:active{
+  color:green;
+}
+
+a.hover{
+  color: #1a4e67;
+}
+
+a.visited{
+  color:#28789d;
+}
+
+a.header:link {
+  color: #e1d7b4;
+}
+
+a.header:hover {
+  color: #ceaa28;
+}
+
+a.header:visited {
+  color: #e1d7b4;
+}
+
+a.header:active {
+  color: green;
 }

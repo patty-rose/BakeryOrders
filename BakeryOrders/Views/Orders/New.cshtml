@@ -4,7 +4,12 @@
 <h1>Add a new item to @Model.Name</h1>
 <form action="/vendors/@Model.Id/orders" method="post">
   <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
-  <label for="orderTitle">Order title:</label>
-  <input id="orderTitle" name="orderTitle" type="text">
+  <label for="orderTitle">Order title:</label><br>
+  <input id="orderTitle" name="orderTitle" type="text"><br>
+  <label for="orderDescription">Ordered items:</label><br>
+  <input id="orderDescription" name="orderDescription" type="text"><br>
+  <label for="orderDate">Delivery date:</label> 
+  <input type="date" id="date" name="date"  max="2022-12-31">
+  
   <button type="submit">Add order</button>
 </form>
