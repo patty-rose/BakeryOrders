@@ -1,7 +1,4 @@
-BakeryOrders.Solution/BakeryOrders/bin
-BakeryOrders.Solution/BakeryOrders/obj
-
-BakeryOrders.Solution/BakeryOrders.Tests/bin
-BakeryOrders.Solution/BakeryOrders.Tests/obj
+*/obj/
+*/bin/
 
 .DS_Store

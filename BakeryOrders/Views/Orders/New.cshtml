@@ -1,15 +1,30 @@
 @{
   Layout = "_Layout";
 } 
-<h1>Add a new item to @Model.Name</h1>
+<h1>Add a new order to @Model.Name</h1>
+<p>Input total of each bakery item the vendor would like to purchase in this order. Price will be calculated upon submitting this form. We do not take orders over 100 of a single item.</p>
 <form action="/vendors/@Model.Id/orders" method="post">
   <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
-  @* <label for="orderTitle">Order title:</label><br>
-  <input id="orderTitle" name="orderTitle" type="text"><br> *@
-  <label for="orderDescription">Ordered items:</label><br>
+  <h3>Bread Items</h3>
+  <input type="number" id="bread1" name="bread1" min="0" max="100" value=0 required>
+  <label for="bread1">Sourdough Loaves:</label><br>
+  <input type="number" id="bread2" name="bread2" min="0" max="100" value=0 required>
+  <label for="bread2">Honey Wheat Loaves:</label><br>
+  <input type="number" id="bread3" name="bread3" min="0" max="100" value=0 required>
+  <label for="bread3">Ciabatta Loaves:</label><br>
+
+  <h3>Pastry Items</h3>
+  <input type="number" id="pastry1" name="pastry1" min="0" max="100" value=0 required>
+  <label for="pastry1">Bear Claws:</label><br>
+  <input type="number" id="pastry2" name="pastry2" min="0" max="100" value=0 required>
+  <label for="pastry2">Crossoints:</label><br>
+  <input type="number" id="pastry3" name="pastry3" min="0" max="100" value=0 required>
+  <label for="pastry3">Raspberry Scones:</label><br>
+
+  <label for="orderDescription">Comments/Notes:</label><br> 
   <input id="orderDescription" name="orderDescription" type="text"><br>
-  <label for="orderDate">Delivery date:</label> 
-  <input type="date" id="orderDate" name="orderDate"  max="2022-12-31">
+  <label for="orderDate">Delivery/Pick-up date:</label><br> 
+  <input type="date" id="orderDate" name="orderDate"  max="2022-12-31"><br>
   
   <button type="submit">Add order</button>
 </form>

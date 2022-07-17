@@ -2,8 +2,8 @@
   Layout = "_Layout";
 } 
 @using BakeryOrders.Models;
-
-<h3>Here are all the orders for this vendor:</h3>
+<h3>Orders</h3>
+<p>Here are all the orders for this vendor:</p>
 
 <ol>
 @foreach (Order order in @Model["Orders"])
@@ -12,4 +12,4 @@
 }
 </ol>
 
-<h3><a href='/vendors/@Model["Vendor"].Id/orders/new'>Add a new order</a></h3>
+<p><a href='/vendors/@Model["Vendor"].Id/orders/new'>Add a new order</a></p>

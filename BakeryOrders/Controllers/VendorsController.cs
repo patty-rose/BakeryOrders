@@ -39,16 +39,19 @@ namespace BakeryOrders.Controllers
     }
 
     [HttpPost("/vendors/{vendorId}/orders")]
-    public ActionResult Create(int vendorId, string orderDescription, int orderPrice, DateTime orderDate)
+    public ActionResult Create(int vendorId, int bread1, int bread2, int bread3, int pastry1, int pastry2, int pastry3, string orderDescription, DateTime orderDate)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
 
       Vendor foundVendor = Vendor.Find(vendorId);
       string vendorName = foundVendor.Name;
 
+      int breadOrder = bread1 + bread2 + bread3;
+      int pastryOrder = pastry1 + pastry2 + pastry3;
       string orderDateOnly = orderDate.ToShortDateString();
       string orderTitle = vendorName + "-" + orderDateOnly;
-      Order newOrder = new Order(orderTitle, 15, 20, orderDescription, orderDateOnly);
+      Order newOrder = new Order(orderTitle, breadOrder, pastryOrder, orderDescription, orderDateOnly);
+      newOrder.CalculatePrice();
 
       foundVendor.AddOrder(newOrder);
 
