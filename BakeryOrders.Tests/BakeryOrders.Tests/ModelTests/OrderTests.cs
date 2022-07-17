@@ -127,5 +127,19 @@ namespace BakeryOrders.Tests
       // Assert (test)
       Assert.AreEqual(pastryOrder, result);
     }
+
+    [TestMethod]
+    public void CalculateOrderPrice_ReturnsCalculatedPrice_Int() 
+    {
+      // Arrange
+      Order newOrder = new Order("Suzie's Cafe-07/15/2022", 15, 20, "test Description", 0, "1/1/2022");
+
+      // Act
+      newOrder.CalculatePrice();
+      int result = newOrder.Price;
+
+      // Assert (test)
+      Assert.AreEqual(84, result);
+    }
   }
 }
