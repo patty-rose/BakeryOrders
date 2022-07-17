@@ -24,14 +24,14 @@ namespace BakeryOrders.Tests
     public void GetTitle_ReturnsTitle_String() 
     {
       // Arrange
-      string Title = "Suzie's Cafe-07/15/2022";
+      string title = "Suzie's Cafe-07/15/2022";
       Order newOrder = new Order(Title, "test Description", 10, "1/1/2022");
 
       // Act
       string result = newOrder.Title;
 
       // Assert (test)
-      Assert.AreEqual(Title, result);
+      Assert.AreEqual(title, result);
     }
 
     [TestMethod]
@@ -98,6 +98,34 @@ namespace BakeryOrders.Tests
 
       //Assert
       Assert.AreEqual(newOrder2, result);
+    }
+
+    [TestMethod]
+    public void GetsBreadOrder_ReturnsBreadOrder_Int() 
+    {
+      // Arrange
+      int breadOrder = 15;
+      Order newOrder = new Order("Suzie's Cafe-07/15/2022", "test Description", 10, "1/1/2022");
+
+      // Act
+      string result = newOrder.BreadOrder;
+
+      // Assert (test)
+      Assert.AreEqual(breadOrder, result);
+    }
+
+    [TestMethod]
+    public void GetsPastryOrder_ReturnsPastryOrder_Int() 
+    {
+      // Arrange
+      int pastryOrder = 15;
+      Order newOrder = new Order("Suzie's Cafe-07/15/2022", "test Description", 10, "1/1/2022");
+
+      // Act
+      string result = newOrder.PastryOrder;
+
+      // Assert (test)
+      Assert.AreEqual(pastryOrder, result);
     }
   }
 }
