@@ -43,5 +43,16 @@ namespace BakeryOrders.Models
     {
       return _instances[searchId-1];
     }
+
+    public void CalculatePrice()
+    {
+      int discountedPastries = PastryOrder / 3;
+      int pastryCost = ((PastryOrder - discountedPastries) * 2) + discountedPastries * 1;
+
+      int freeBreads = BreadOrder / 3;
+      int breadCost = (BreadOrder - freeBreads) * 5;
+
+      Price = pastryCost + breadCost;
+    }
   }
 }
