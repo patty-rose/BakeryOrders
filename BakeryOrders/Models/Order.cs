@@ -7,6 +7,8 @@ namespace BakeryOrders.Models
   {
     // auto implemented properties
     public string Title { get; set; }
+    public int BreadOrder { get; set; }
+    public int PastryOrder { get; set; }
     public string Description { get; set; }
     public int Price { get; set; }
     public string Date { get; set; }
@@ -14,9 +16,11 @@ namespace BakeryOrders.Models
     private static List<Order> _instances = new List<Order> {};
 
     //constructor
-    public Order(string orderTitle, string orderDescription, int orderPrice, string orderDate)
+    public Order(string orderTitle, int breadOrder, int pastryOrder, string orderDescription, int orderPrice, string orderDate)
     {
       Title = orderTitle;
+      BreadOrder = breadOrder;
+      PastryOrder = pastryOrder;
       Description = orderDescription;
       Price = orderPrice;
       Date = orderDate;

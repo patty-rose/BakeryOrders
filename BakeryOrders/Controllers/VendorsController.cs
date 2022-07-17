@@ -48,7 +48,7 @@ namespace BakeryOrders.Controllers
 
       string orderDateOnly = orderDate.ToShortDateString();
       string orderTitle = vendorName + "-" + orderDateOnly;
-      Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDateOnly);
+      Order newOrder = new Order(orderTitle, 15, 20, orderDescription, orderPrice, orderDateOnly);
 
       foundVendor.AddOrder(newOrder);
 
