@@ -99,7 +99,7 @@ namespace BakeryOrders.Tests
     public void AddOrder_AssociatesOrderWithVendor_OrderList()
     {
       //Arrange
-      Order newOrder = new Order("Suzie's Cafe-07/15/2022", 15, 20, "test Description", 10, "1/1/2022");
+      Order newOrder = new Order("Suzie's Cafe-07/15/2022", 15, 20, "test Description", "1/1/2022");
       Vendor newVendor = new Vendor("Suzie's Cafe", "test Description");
       newVendor.AddOrder(newOrder);
       List<Order> newList = new List<Order> { newOrder };

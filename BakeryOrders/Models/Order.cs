@@ -16,13 +16,12 @@ namespace BakeryOrders.Models
     private static List<Order> _instances = new List<Order> {};
 
     //constructor
-    public Order(string orderTitle, int breadOrder, int pastryOrder, string orderDescription, int orderPrice, string orderDate)
+    public Order(string orderTitle, int breadOrder, int pastryOrder, string orderDescription, string orderDate)
     {
       Title = orderTitle;
       BreadOrder = breadOrder;
       PastryOrder = pastryOrder;
       Description = orderDescription;
-      Price = orderPrice;
       Date = orderDate;
       _instances.Add(this);
       Id = _instances.Count;

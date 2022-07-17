@@ -16,7 +16,7 @@ namespace BakeryOrders.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("test Order", 15, 20, "test Description", 10, "1/1/2022");
+      Order newOrder = new Order("test Order", 15, 20, "test Description", "1/1/2022");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -25,7 +25,7 @@ namespace BakeryOrders.Tests
     {
       // Arrange
       string title = "Suzie's Cafe-07/15/2022";
-      Order newOrder = new Order(title, 15, 20, "test Description", 10, "1/1/2022");
+      Order newOrder = new Order(title, 15, 20, "test Description", "1/1/2022");
 
       // Act
       string result = newOrder.Title;
@@ -39,7 +39,7 @@ namespace BakeryOrders.Tests
     {
       // Arrange
       string description = "test description";
-      Order newOrder = new Order("test order", 15, 20, description, 10, "1/1/2022");
+      Order newOrder = new Order("test order", 15, 20, description, "1/1/2022");
 
       // Act
       string result = newOrder.Description;
@@ -48,19 +48,19 @@ namespace BakeryOrders.Tests
       Assert.AreEqual(description, result);
     }
 
-    [TestMethod]
-    public void GetDescription_ReturnsPrice_Int() 
-    {
-      // Arrange
-      int price = 10;
-      Order newOrder = new Order("test order", 15, 20, "test description", price, "1/1/2022");
+    // [TestMethod]
+    // public void GetPrice_ReturnsPrice_Int() 
+    // {
+    //   // Arrange
+    //  int price = 10
+    //   Order newOrder = new Order("test order", 15, 20, "test description", 10, "1/1/2022");
 
-      // Act
-      int result = newOrder.Price;
+    //   // Act
+    //   int result = newOrder.Price;
 
-      // Assert (test)
-      Assert.AreEqual(price, result);
-    }
+    //   // Assert (test)
+    //   Assert.AreEqual(price, result);
+    // }
 
     [TestMethod]
     public void GetAll_ReturnsEmptyList_OrderList()
@@ -75,7 +75,7 @@ namespace BakeryOrders.Tests
     {
       //Arrange
       string title = "Suzie's Cafe-07/15/2022";
-      Order newOrder = new Order(title, 15, 20, "test Description", 10, "1/1/2022");
+      Order newOrder = new Order(title, 15, 20, "test Description", "1/1/2022");
 
       //Act
       int result = newOrder.Id;
@@ -90,8 +90,8 @@ namespace BakeryOrders.Tests
       //Arrange
       string title01 = "Suzie's Cafe-07/15/2022";
       string title02 = "New seasons-07/15/2022";
-      Order newOrder1 = new Order(title01, 15, 20, "test Description", 10, "1/1/2022");
-      Order newOrder2 = new Order (title02, 15, 20, "test Description", 10, "1/1/2022");
+      Order newOrder1 = new Order(title01, 15, 20, "test Description", "1/1/2022");
+      Order newOrder2 = new Order (title02, 15, 20, "test Description", "1/1/2022");
 
       //Act
       Order result = Order.Find(2);
@@ -105,7 +105,7 @@ namespace BakeryOrders.Tests
     {
       // Arrange
       int breadOrder = 15;
-      Order newOrder = new Order("Suzie's Cafe-07/15/2022", breadOrder, 20, "test Description", 10, "1/1/2022");
+      Order newOrder = new Order("Suzie's Cafe-07/15/2022", breadOrder, 20, "test Description", "1/1/2022");
 
       // Act
       int result = newOrder.BreadOrder;
@@ -119,7 +119,7 @@ namespace BakeryOrders.Tests
     {
       // Arrange
       int pastryOrder = 20;
-      Order newOrder = new Order("Suzie's Cafe-07/15/2022", 15, pastryOrder, "test Description", 10, "1/1/2022");
+      Order newOrder = new Order("Suzie's Cafe-07/15/2022", 15, pastryOrder, "test Description", "1/1/2022");
 
       // Act
       int result = newOrder.PastryOrder;
@@ -132,7 +132,7 @@ namespace BakeryOrders.Tests
     public void CalculateOrderPrice_ReturnsCalculatedPrice_Int() 
     {
       // Arrange
-      Order newOrder = new Order("Suzie's Cafe-07/15/2022", 15, 20, "test Description", 0, "1/1/2022");
+      Order newOrder = new Order("Suzie's Cafe-07/15/2022", 15, 20, "test Description", "1/1/2022");
 
       // Act
       newOrder.CalculatePrice();
